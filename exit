@@ -1,0 +1,17 @@
+[33mcommit 596d17586068da101447bdba8aa68f1066c708e1[m[33m ([m[1;36mHEAD -> [m[1;32mbranch2Behzad[m[33m, [m[1;31morigin/my_new_branch[m[33m, [m[1;31morigin/branch2Behzad[m[33m, [m[1;32mmy_new_branch[m[33m)[m
+Author: Behzad Khokher <behzadkhokher@gmail.com>
+Date:   Sat Nov 26 20:48:59 2022 +0500
+
+    adding a line to readme
+
+[33mcommit 01afff696e31d659aebb7136ff0b118b0cb44e3a[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Behzad Khokher <behzadkhokher@gmail.com>
+Date:   Sat Nov 26 17:32:24 2022 +0500
+
+    first commit
+
+[33mcommit 4d7efca76c6957faf3d37fa1c47da86dc43434cc[m
+Author: Behzad Khokher <behzadkhokher@gmail.com>
+Date:   Sat Nov 26 16:11:24 2022 +0500
+
+    Initialize project using Create React App
