@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import TakeNote from "./TakeNote";
-import NoteDisplay from "./NoteDisplay";
+import TakeNote from "./TakeNote/TakeNote";
+import NoteDisplay from "./NoteDisplay/NoteDisplay";
 
 function Noteboard() {
   const [notes, setNotes] = useState([]);
