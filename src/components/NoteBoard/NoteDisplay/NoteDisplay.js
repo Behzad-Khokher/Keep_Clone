@@ -1,5 +1,5 @@
 import React from "react";
-import NoteCard from "./NoteCard";
+import NoteCard from "../NoteCard/NoteCard";
 function NoteDisplay({ noteList }) {
   return (
     <div>
