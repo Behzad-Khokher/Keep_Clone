@@ -8,7 +8,7 @@ function Main() {
       <div className="col-2">
         <Sidebar />
       </div>
-      <div className="col-10">
+      <div className="col">
         <NoteBoard />
       </div>
     </div>
