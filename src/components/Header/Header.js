@@ -1,15 +1,11 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
-import { Box } from "@mui/material";
 
 function Header() {
   return (
-    <Box sx={{ display: "flex", alignItems: "center" }}>
+    <div className="d-flex ">
       <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" />
-      <Typography variant="h5" color="GrayText">
-        Keep
-      </Typography>
-    </Box>
+      <h3 className="align-self-end text-muted">Keep</h3>
+    </div>
   );
 }
 
