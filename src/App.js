@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
+      <div className="mt-5">
+        <Main />
+      </div>
     </>
   );
 }

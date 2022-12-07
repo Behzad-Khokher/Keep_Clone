@@ -30,8 +30,8 @@ function NoteCard(props) {
         <Typography>{props.body}</Typography>
       </CardContent>
       <CardActions>
-        <ArchiveIcon style={{ marginLeft: "auto" }} />
-        <DeleteIcon style={{ marginLeft: "auto" }} />
+        <ArchiveIcon width={24} height={24} style={{ marginLeft: "auto" }} />
+        <DeleteIcon width={24} height={24} style={{ marginLeft: "auto" }} />
       </CardActions>
     </MyCard>
   );

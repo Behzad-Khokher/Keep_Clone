@@ -21,6 +21,7 @@ function EmptyPage() {
       <LightBulb color={"#E6E6E6"} height={180} width={180} />
       <Text>Notes You Add Appear Here</Text>
     </Container>
+    //apple pie
   );
 }
 

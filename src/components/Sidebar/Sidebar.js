@@ -1,77 +1,45 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import AppBar from "@mui/material/AppBar";
-import CssBaseline from "@mui/material/CssBaseline";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import Header from "../Header/Header";
+import React from "react";
+import { useState } from "react";
+import LightBulb from "../Icons/LightBulb";
+import ArchiveIcon from "../Icons/ArchiveIcon";
+import SidebarButton from "./SidebarButton/SidebarButton";
+import ReminderIcon from "../Icons/ReminderIcon";
 
-const drawerWidth = 240;
+function Sidebar() {
+  const [highLight, setHighLight] = useState({
+    notes: true,
+    archive: false,
+    reminders: false,
+    trash: false,
+  });
 
-export default function Sidebar(props) {
+  const HandleClick = () => {
+    console.log("handle click running");
+  };
+
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar
-        color="inherit"
-        position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
-        <Toolbar>
-          <Header />
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
-      >
-        <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
-          <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Box>
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        {props.children}
-      </Box>
-    </Box>
+    <div>
+      <ul className="d-flex flex-column list-unstyled">
+        <div onClick={HandleClick}>
+          <SidebarButton name="Notes" isSelected={true}>
+            <LightBulb width={24} height={24} />
+          </SidebarButton>
+        </div>
+
+        <SidebarButton name="Edit Archive" isSelected={false}>
+          <ArchiveIcon width={24} height={24} />
+        </SidebarButton>
+
+        <SidebarButton name="Reminders" isSelected={false}>
+          <ReminderIcon height={24} width={24} />
+        </SidebarButton>
+
+        <SidebarButton name="Trash" isSelected={false}>
+          <LightBulb width={24} height={24} />
+        </SidebarButton>
+      </ul>
+    </div>
   );
 }
+
+export default Sidebar;
